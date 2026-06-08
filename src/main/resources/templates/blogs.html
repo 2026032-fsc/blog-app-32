@@ -1,18 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ブログ一覧</title>
 </head>
 
 <body>
-    <p><input type="checkbox">
-        <span class="task-text">メールを返信する </span>
-    </p>
-    <h1>Spring</h1>
-    <h1>ばねみたい</h1>
+
+    <!-- こっちの table タグの中はまだタイトルに個別ページのリンク先は埋め込んでいない -->
+    <!-- <table>
+        <h1>ブログ一覧</h1>
+
+        <tr th:each="blog : ${blogs}">
+            <td th:text="${blog.title}">タイトル</td>
+            <td th:text="${blog.content}">中身</td>
+        </tr>
+    </table> -->
+    <ul>
+        <h1>ブログ一覧</h1>
+        <li th:each="blog : ${blogs}">
+            <a th:href = "@{/blogs/{id}(id=${blog.id})}" th:text="${blog.title}">ここにはブログ名が入るよ</a>
+            <p th:text= "${blog.content}">文章がここに入るよ</p>
+        </li>
+    </ul>
 </body>
 
 </html>
