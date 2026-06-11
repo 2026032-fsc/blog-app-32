@@ -18,4 +18,9 @@ public class BlogsService {
     public Optional<Blog> findById(Long id){
         return blogRepository.findById(id);
     }
+    // Repository の createメソッドを呼び出す処理をここで追加
+    // createの引数として BlogForm クラスを受け取ることでゲッターを呼びだす。
+    public void create(BlogForm form){
+        blogRepository.create(form.getTitle(), form.getContent());
+    }
 }

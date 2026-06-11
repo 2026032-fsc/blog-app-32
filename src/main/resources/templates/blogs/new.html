@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
+<html lang="en">
+
+<head th:replace="~{fragments/layout :: head('新規作成')}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新しい記事の追加</title>
+    <title>新しいブログ投稿</title>
 </head>
+
 <body>
-    <h1>新しい記事の追加</h1>
-    <form action="/blogs" method="post"></form>
+     <div th:replace="~{fragments/layout :: header}"></div>
+    <h1>新しいブログ投稿</h1>
+    <form th:action="@{/blogs}" method="post">
+        <label for="title">タイトル</label>
+        <input type="text" id="title" name="title">
+        <label for="content">本文</label>
+        <input type="text" id="content" name="content">
+        <button type="submit">登録</button>
+
+    </form>
 </body>
+
 </html>

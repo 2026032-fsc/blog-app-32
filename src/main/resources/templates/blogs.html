@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
 
-<head>
+<head th:replace="~{fragments/layout :: head('ブログ一覧')}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ブログ一覧</title>
@@ -18,11 +18,13 @@
             <td th:text="${blog.content}">中身</td>
         </tr>
     </table> -->
+    <div th:replace="~{fragments/layout :: header}"></div>
+
     <ul>
         <h1>ブログ一覧</h1>
         <li th:each="blog : ${blogs}">
-            <a th:href = "@{/blogs/{id}(id=${blog.id})}" th:text="${blog.title}">ここにはブログ名が入るよ</a>
-            <p th:text= "${blog.content}">文章がここに入るよ</p>
+            <a th:href="@{/blogs/{id}(id=${blog.id})}" th:text="${blog.title}">ここにはブログ名が入るよ</a>
+            <p th:text="${blog.content}">文章がここに入るよ</p>
         </li>
     </ul>
 </body>
