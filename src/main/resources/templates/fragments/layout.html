@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
 <head th:fragment="head(title)">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{/css/style.css}">
     <title th:text="${title}">マイブログ</title>
 </head>
+
 <body>
-    <header th:fragment="header">
-        <a th:href="@{/blogs}">ブログ一覧</a> | 
-        <a th:href="@{/blogs/new}">投稿する</a>
+    <header th:fragment="header" class="site-header">
+        <div class="header-menu">
+            <a th:href="@{/blogs}">ブログ一覧</a> |
+            <a th:href="@{/blogs/new}">投稿する</a>
+        </div>
     </header>
 </body>
+
 </html>

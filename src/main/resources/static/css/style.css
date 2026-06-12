@@ -1,27 +1,40 @@
 header {
-    border-bottom: 2px solid #333333; /* 下線の太さ(2px) 線の種類(実線) 線の色(濃いグレー) */
-    padding-bottom: 15px;            /* 線と文字の間に少しスキマ（余白）を作る */
-    margin-bottom: 30px;             /* 線の「外側」の下に隙間を作り、下の文字と離す */
+    border-bottom: 2px solid #333333;
+    /* 下線の太さ(2px) 線の種類(実線) 線の色(濃いグレー) */
+    padding-bottom: 15px;
+    /* 線と文字の間に少しスキマ（余白）を作る */
+    margin-bottom: 30px;
+    /* 線の「外側」の下に隙間を作り、下の文字と離す */
 }
 
 .blog-item-title {
-    font-size: 20px;          /* 文字の大きさ（お好みで調整してください） */
-    color: #0076df;           /* 文字の色（例：綺麗なブルー） */
-    font-weight: bold;        /* 太字にする */
-    text-decoration: none;    /* リンクの下線を消したい場合はこれを入れる */
+    font-size: 20px;
+    /* 文字の大きさ（お好みで調整してください） */
+    color: #0076df;
+    /* 文字の色（例：綺麗なブルー） */
+    font-weight: bold;
+    /* 太字にする */
+    text-decoration: none;
+    /* リンクの下線を消したい場合はこれを入れる */
 }
 
 /* ブログ1つ1つの枠線の設定 */
 /* ブログ1つ1つの枠線の設定 */
 ul li {
-    list-style: none;        /* 左側の「・」を消す */
-    border: 2px solid #333333; /* 線の太さ、種類、色 */
-    padding: 20px;           /* 枠線の内側の余白 */
-    border-radius: 8px;      /* 枠線の角を丸くする */
+    list-style: none;
+    /* 左側の「・」を消す */
+    border: 2px solid #333333;
+    /* 線の太さ、種類、色 */
+    padding: 20px;
+    /* 枠線の内側の余白 */
+    border-radius: 8px;
+    /* 枠線の角を丸くする */
 
     /* 👇 ここを追加・変更します */
-    max-width: 600px;        /* 枠の最大の横幅（お好みで調整してください） */
-    margin: 0 auto 15px auto; /* 上は0、左右は自動(真ん中寄せ)、下は15pxの隙間 */
+    max-width: 600px;
+    /* 枠の最大の横幅（お好みで調整してください） */
+    margin: 0 auto 15px auto;
+    /* 上は0、左右は自動(真ん中寄せ)、下は15pxの隙間 */
 }
 
 /* リスト全体の左側の余白をリセットする */
@@ -32,10 +45,14 @@ ul {
 /* フォームの中身を縦並びにする設定 */
 form {
     display: flex;
-    flex-direction: column;  /* 中身を上から下に縦並びにする */
-    max-width: 600px;        /* ブログ一覧と合わせて横幅を制限 */
-    margin: 0 auto;          /* フォーム自体を画面の真ん中に寄せる */
-    gap: 15px;               /* 要素と要素の間のスキマ（パーツ同士がくっつかないようにする） */
+    flex-direction: column;
+    /* 中身を上から下に縦並びにする */
+    max-width: 600px;
+    /* ブログ一覧と合わせて横幅を制限 */
+    margin: 0 auto;
+    /* フォーム自体を画面の真ん中に寄せる */
+    gap: 15px;
+    /* 要素と要素の間のスキマ（パーツ同士がくっつかないようにする） */
 }
 
 /* 入力欄（タイトルと本文）の見た目を少し整える（お好みで） */
@@ -55,4 +72,21 @@ form button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+}
+
+/* ヘッダー全体を横幅いっぱいに広げ、右寄せにする */
+.site-header {
+    display: flex;
+    justify-content: flex-end;
+    /* 中身を一番右側に寄せる */
+    padding: 10px 20px;
+    /* 画面の端に張り付かないように少し隙間を作る */
+    box-sizing: border-box;
+}
+
+/* メニュー内のリンクの見た目（必要に応じて調整してください） */
+.header-menu a {
+    text-decoration: underline;
+    color: #1a0dab;
+    margin: 0 5px;
 }

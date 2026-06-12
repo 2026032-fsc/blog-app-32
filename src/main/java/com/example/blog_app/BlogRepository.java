@@ -37,4 +37,10 @@ public class BlogRepository {
         .param(content)  // 2番目の ? に入る値
         .update();
   }
+  // public void create(Blog blog){
+  //   jdbcClient.sql("INSERT INTO blogs (title, content)  VALUES")
+  //       .param("title",blog.getTitle())
+  //       .param("content",blog.getContent())
+  //       .update();
+  // }
 }
